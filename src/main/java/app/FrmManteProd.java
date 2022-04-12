@@ -275,9 +275,7 @@ public class FrmManteProd extends JFrame {
 			em.getTransaction().commit();
 			
 			mensaje("Producto registrado");
-			}
-			
-			
+			}	
 		catch(Exception ex) {
 			System.out.println("Error al registrar...." + ex.getMessage());
 			//em.getTransaction().rollback();
