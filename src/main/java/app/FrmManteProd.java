@@ -156,7 +156,7 @@ public class FrmManteProd extends JFrame {
 				
 			}
 		});
-		Eliminar.setBounds(324, 102, 89, 23);
+		Eliminar.setBounds(324, 97, 89, 23);
 		contentPane.add(Eliminar);
 		
 		JLabel lblNewLabel = new JLabel("Proovedor");
@@ -289,14 +289,13 @@ public class FrmManteProd extends JFrame {
 	}
 	
 	void consultar() {
-		EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");
-		
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory("mysql");		
 		EntityManager em = factory.createEntityManager();
 		
 		Productos u = em.find(Productos.class, txtCódigo.getText());
 		
 		if(u!=null) {
-		txtDescripcion.setText(u.getDescripcion());
+		txtDescripcion.setText(u.getDescripcion());	
 		txtStock.setText(u.getStk()+"");
 				
 		txtPrecio.setText(""+u.getPrecio());
